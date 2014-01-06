@@ -1,11 +1,11 @@
 {
   "name": "tiny-trigger",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Trigger cross-browser DOM events",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/testling | node_modules/.bin/tspec",
-    "bundle": "node build/rapper.js && echo 'Bundled'",
+    "bundle": "node_modules/.bin/browserify index.js -s tinyTrigger > dist/tinytrigger.js && echo 'Bundled'",
     "minify": "node_modules/.bin/uglifyjs dist/tinytrigger.js -o dist/tinytrigger.min.js -m && echo 'Minified'",
     "build": "npm test && npm run bundle && npm run minify"
   },
