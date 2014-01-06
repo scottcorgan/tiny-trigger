@@ -1,6 +1,6 @@
 # tiny-trigger
  
-Trigger cross-browser DOM events. Works with [Browserify](http:/browserify.org) and standalone.
+Trigger cross-browser DOM events. Works with [Browserify](http:/browserify.org) and as a standalone.
 
 [![browser support](https://ci.testling.com/USER/PROJECT.png)](https://ci.testling.com/USER/PROJECT)
  
