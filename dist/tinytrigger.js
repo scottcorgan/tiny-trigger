@@ -1,3 +1,4 @@
+(function (module) {
 var doc = document;
 var slice = [].slice;
 
@@ -29,3 +30,4 @@ function select (selector, multiple) {
     ? (multiple) ? slice.call(doc.querySelectorAll(selector), 0) : [doc.querySelector(selector)]
     : (selector.length) ? slice.call(selector, 0) : [selector];
 };
+}({ exports: window.tinyTrigger }));

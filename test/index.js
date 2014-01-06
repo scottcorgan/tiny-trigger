@@ -36,3 +36,21 @@ test('triggers multiple events', function (t) {
     t.end();
   }, 1);
 });
+
+test('triggers events for array of DOM elements passed in', function (t) {
+  var calls = 0;
+  var elements = document.querySelectorAll('.multi');
+  
+  for (var i in [].slice.call(elements, 0)) {
+    elements[i].addEventListener('click', function (e) {
+      calls += 1;
+    });
+  }
+  
+  e(elements, 'click', true);
+  
+  setTimeout(function () {
+    t.equal(calls, 2, 'all elements triggered event');
+    t.end();
+  }, 1);
+});
