@@ -4,7 +4,7 @@
   "description": "Trigger cross-browser DOM events",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/testling",
+    "test": "node_modules/.bin/testling | node_modules/.bin/tspec",
     "bundle": "node build/rapper.js && echo 'Bundled'",
     "minify": "node_modules/.bin/uglifyjs dist/tinytrigger.js -o dist/tinytrigger.min.js -m && echo 'Minified'",
     "build": "npm test && npm run bundle && npm run minify"
@@ -39,6 +39,7 @@
     "browsers": [
       "iexplore/10.0",
       "iexplore/9.0",
+      "iexplore/8.0",
       "firefox/16..latest",
       "chrome/22..latest",
       "safari/5.1..latest",
