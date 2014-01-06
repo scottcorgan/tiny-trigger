@@ -2,7 +2,7 @@
  
 Trigger cross-browser DOM events. Works with [Browserify](http:/browserify.org) and as a standalone.
 
-[![browser support](https://ci.testling.com/USER/PROJECT.png)](https://ci.testling.com/USER/PROJECT)
+[![browser support](https://ci.testling.com/scottcorgan/tiny-trigger.png)](https://ci.testling.com/scottcorgan/tiny-trigger)
  
 ## Install
 
