@@ -1,0 +1,27 @@
+{
+  "name": "tiny-trigger",
+  "main": "dist/tinytrigger.js",
+  "version": "0.1.1",
+  "homepage": "https://github.com/scottcorgan/tiny-trigger",
+  "authors": [
+    "Scott Corgan <scottcorgan@gmail.com>"
+  ],
+  "description": "Trigger cross-browser DOM events",
+  "keywords": [
+    "trigger",
+    "browser",
+    "events",
+    "tiny"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build",
+    ".gitignore",
+    "package.json"
+  ]
+}

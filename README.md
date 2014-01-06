@@ -23,11 +23,36 @@ bower install tiny-trigger --save
 ```
 
 ## Usage
+
+Browserify
  
 ```js
-// Usage
+var trigger = require('tiny-trigger');
+
+document.querySelector('.some-element').addEventListenr('click', function (e) {
+  //
+});
+
+trigger('.some-element', 'click');
 ```
  
+Browser
+var trigger = window.tinyTrigger;
+
+```js
+document.querySelector('.some-element').addEventListenr('click', function (e) {
+  //
+});
+
+trigger('.some-element', 'click');
+```
+
+### trigger(selector, event[, multiple])
+
+* `selector` - css selector OR DOM element OR array of DOM elements
+* `event` - the name of the event to trigger
+* `multple` - if passing in a css selector, should the function find one element or all the elements that match the selector (querySelector vs querySelectorAll)
+
 ## Run Tests
 
 Requires [Phantomjs](phantomjs.org/download.html) is installed
