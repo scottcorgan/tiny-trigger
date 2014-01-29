@@ -10,29 +10,18 @@ module.exports = function (selector, evt, multiple) {
   }
 };
 
-function dispatch (element, evt) {
+function dispatch (element, event) {
   var domEvent;
   
-  // // dispatch for IE
-  // if (doc.createEventObject) {
-  //   return element.fireEvent('on' + evt, doc.createEventObject());
-  // }
-  
-  if (document.createEventObject) {
-      //ie
-      e = document.createEventObject();                    
-      element.fireEvent('on' + evt, e);
+  if (document.createEvent) {
+    var evt = document.createEvent('MouseEvents');
+    evt.initEvent(event, true, false);
+    element.dispatchEvent(evt);  
+  } else if(document.createEventObject) {
+    element.fireEvent('on' + event) ; 
+  } else if (typeof element['on' + event] === 'function' ) {
+    element['on' + event](); 
   }
-  else {
-      //others
-      e = document.createEvent('HTMLEvents');
-      e.initEvent(evt, true, true);
-      element.dispatchEvent(e);
-  }
-  
-  // domEvent = doc.createEvent("HTMLEvents");
-  // domEvent.initEvent(evt, true, true);
-  // return !element.dispatchEvent(domEvent);
 };
 
 function select (selector, multiple) {
