@@ -11,8 +11,6 @@ module.exports = function (selector, evt, multiple) {
 };
 
 function dispatch (element, event) {
-  var domEvent;
-  
   if (document.createEvent) {
     var evt = document.createEvent('MouseEvents');
     evt.initEvent(event, true, false);
