@@ -47,7 +47,7 @@ document.querySelector('.some-element').addEventListenr('click', function (e) {
 trigger('.some-element', 'click');
 ```
 
-### trigger(selector, event[, multiple])
+## trigger(selector, event[, multiple])
 
 * `selector` - css selector OR DOM element OR array of DOM elements
 * `event` - the name of the event to trigger
