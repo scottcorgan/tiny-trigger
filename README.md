@@ -29,7 +29,7 @@ Browserify
 ```js
 var trigger = require('tiny-trigger');
 
-document.querySelector('.some-element').addEventListenr('click', function (e) {
+document.querySelector('.some-element').addEventListener('click', function (e) {
   //
 });
 
@@ -40,7 +40,7 @@ Browser
 var trigger = window.tinyTrigger;
 
 ```js
-document.querySelector('.some-element').addEventListenr('click', function (e) {
+document.querySelector('.some-element').addEventListener('click', function (e) {
   //
 });
 
