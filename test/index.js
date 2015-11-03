@@ -15,6 +15,19 @@ test('triggers DOM event', function (t) {
   e('.trigger-me', 'click');
 });
 
+test('triggers custom event', function (t) {
+  insert('<div class="custom-trigger-me"></div>').end();
+  
+  document
+    .querySelector('.custom-trigger-me')
+    .addEventListener('custom-event', function (e) {
+      t.ok(true, 'event called');
+      t.end();
+    });
+  
+  e('.custom-trigger-me', 'custom-event');
+});
+
 test('triggers multiple events', function (t) {
   var calls = 0;
   
@@ -24,12 +37,12 @@ test('triggers multiple events', function (t) {
   var elements = [].slice.call(document.querySelectorAll('.multi'), 0);
   
   for (var i in elements) {
-    elements[i].addEventListener('click', function (e) {
+    elements[i].addEventListener('change', function (e) {
       calls += 1;
     });
   }
   
-  e('.multi', 'click', true);
+  e('.multi', 'change', true);
   
   setTimeout(function () {
     t.equal(calls, 2, 'all elements triggered event');
