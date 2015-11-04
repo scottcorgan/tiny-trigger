@@ -37,9 +37,10 @@ trigger('.some-element', 'click');
 ```
  
 Browser
-var trigger = window.tinyTrigger;
 
 ```js
+var trigger = window.tinyTrigger;
+
 document.querySelector('.some-element').addEventListener('click', function (e) {
   //
 });
